@@ -1,6 +1,7 @@
 #include <iostream>
+#include "TinyLib.h"
 
 int main(){
-    std::cout<<"hello QMEngine"<<std::endl;
+    PrintHello();
     return 0;
 }
