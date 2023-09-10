@@ -13,7 +13,7 @@ message("SOURCES_FILES : "${SOURCES_FILES})
 
 add_executable(QMEngine ${SOURCES_FILES} ${HEADER_FILES})
 
-target_link_libraries(QMEngine PUBLIC TinyLib nlohmann_json)
+target_link_libraries(QMEngine PUBLIC TinyLib nlohmann_json glfw)
 
 target_include_directories(QMEngine 
     PUBLIC

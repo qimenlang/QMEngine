@@ -1,3 +1,6 @@
 [submodule "thirdparty/json"]
 	path = thirdparty/json
 	url = git@github.com:nlohmann/json.git
+[submodule "thirdparty/glfw"]
+	path = thirdparty/glfw
+	url = git@github.com:glfw/glfw.git

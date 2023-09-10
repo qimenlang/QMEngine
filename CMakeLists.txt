@@ -10,12 +10,14 @@ set(CXX_EXTENSIONS OFF)
 
 option(COMPILE_EXE "compile excutable or not" ON)
 
+add_subdirectory(CMakeTestModule)
+# add_subdirectory(thirdparty/json)
+
 set(CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake/)
 include(AddGitSubmodule)
 add_git_submodule(thirdparty/json)
+add_git_submodule(thirdparty/glfw)
 
-add_subdirectory(CMakeTestModule)
-# add_subdirectory(thirdparty/json)
 
 if(COMPILE_EXE)
     add_subdirectory(runtime)
