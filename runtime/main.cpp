@@ -1,6 +1,8 @@
 #include <iostream>
 #include <TinyLib.h>
 #include <nlohmann/json.hpp>
+#include "include/glad/glad.h"
+
 
 
 int main(){
