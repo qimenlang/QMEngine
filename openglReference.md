@@ -1,0 +1,1 @@
+GLFW's window handling documentation : https://www.glfw.org/docs/latest/window.html#window_hints
