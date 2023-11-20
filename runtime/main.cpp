@@ -14,13 +14,13 @@ const unsigned int SCR_HEIGHT = 600;
 void processInput(GLFWwindow *window)
 {
     if(glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
-        glfwSetWindowShouldClose(window, true);
+        glfwSetWindowShouldClose(window, true); 
 }
 // viewport resize callback, when window is resizing
 void framebuffer_size_callback(GLFWwindow* window, int width, int height)
 {
     glViewport(0, 0, width, height);
-} 
+}
 
 int main(){
     PrintHello();
@@ -44,21 +44,27 @@ int main(){
     }
     //glfw make context for window on current thread
     glfwMakeContextCurrent(window);
-    glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);  
-    
+    glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
+
     // init glad before any opengl function call
     // glad: load all OpenGL function pointers
     if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
     {
         std::cout << "Failed to initialize GLAD" << std::endl;
         return -1;
-    }  
+    }
 
     while(!glfwWindowShouldClose(window))
-    {   
+    {
+        //输入
         processInput(window);
+        //渲染
+        glClearColor(0.0f, 0.0f, 1.0f, 1.0f);
+        glClear(GL_COLOR_BUFFER_BIT);
+        //交换缓冲
         glfwSwapBuffers(window);
-        glfwPollEvents();    
+        //检查调用事件
+        glfwPollEvents();
     }
     glfwTerminate();
     return 0;
